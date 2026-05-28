@@ -46,5 +46,17 @@ final class FizzBuzzTest extends TestCase
         $this->assertEquals("Buzz", $res);
     }
 
+    /**
+     * @test
+     */
+    public function givenNumberDivisibleBy3and5RetunsFizzBuzz()
+    {
+        $fizz = new FizzBuzz();
+
+        $res = $fizz->evaluate("15");
+
+        $this->assertEquals("FizzBuzz", $res);
+    }
+
 
 }
