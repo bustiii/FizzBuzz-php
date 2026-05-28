@@ -9,15 +9,19 @@ use PHPUnit\Framework\TestCase;
 
 final class FizzBuzzTest extends TestCase
 {
+    private FizzBuzz $fizz;
+    protected function setUp():void
+    {
+        $this->fizz = new FizzBuzz;
+    }
+
 
     /**
      * @test
      */
     public function givenNormalNumberReturnsNumber()
     {
-        $fizz = new FizzBuzz();
-
-        $res = $fizz->evaluate("1");
+        $res = $this->fizz->evaluate("1");
 
         $this->assertEquals("1", $res);
     }
@@ -27,9 +31,7 @@ final class FizzBuzzTest extends TestCase
      */
     public function GivenNumberDivisibleBy3ReturnsFizz()
     {
-        $fizz = new FizzBuzz();
-
-        $res = $fizz->evaluate("3");
+        $res = $this->fizz->evaluate("3");
 
         $this->assertEquals("Fizz", $res);
     }
@@ -39,9 +41,7 @@ final class FizzBuzzTest extends TestCase
      */
     public function givenNumberDivisibleBy5ReturnsBuzz()
     {
-        $fizz = new FizzBuzz();
-
-        $res = $fizz->evaluate("5");
+        $res = $this->fizz->evaluate("5");
 
         $this->assertEquals("Buzz", $res);
     }
@@ -51,9 +51,7 @@ final class FizzBuzzTest extends TestCase
      */
     public function givenNumberDivisibleBy3and5RetunsFizzBuzz()
     {
-        $fizz = new FizzBuzz();
-
-        $res = $fizz->evaluate("15");
+        $res = $this->fizz->evaluate("15");
 
         $this->assertEquals("FizzBuzz", $res);
     }
