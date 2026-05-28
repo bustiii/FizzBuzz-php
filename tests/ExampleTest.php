@@ -13,36 +13,14 @@ final class ExampleTest extends TestCase
     /**
      * @test
      */
-    public function trueAssertion()
+    public function givenNormalNumberReturnsNumber()
     {
-        $example = new Example();
+        $fizz = new FizzBuzz();
 
-        $integerValue = $example->integerChecker(1);
+        $res = $fizz->evaluate(1);
 
-        $this->assertTrue($integerValue);
+        $this->assertEquals("1", $res);
     }
 
-    /**
-     * @test
-     */
-    public function falseAssertion()
-    {
-        $example = new Example();
 
-        $integerValue = $example->integerChecker('1');
-
-        $this->assertFalse($integerValue);
-    }
-
-    /**
-     * @test
-     */
-    public function equalsAssertion()
-    {
-        $example = new Example();
-
-        $integerValue = $example->integerChecker(1);
-
-        $this->assertEquals(true, $integerValue);
-    }
 }
