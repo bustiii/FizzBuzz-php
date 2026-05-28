@@ -17,7 +17,7 @@ final class FizzBuzzTest extends TestCase
     {
         $fizz = new FizzBuzz();
 
-        $res = $fizz->evaluate(1);
+        $res = $fizz->evaluate("1");
 
         $this->assertEquals("1", $res);
     }
@@ -29,7 +29,7 @@ final class FizzBuzzTest extends TestCase
     {
         $fizz = new FizzBuzz();
 
-        $res = $fizz->evaluate(3);
+        $res = $fizz->evaluate("3");
 
         $this->assertEquals("Fizz", $res);
     }
